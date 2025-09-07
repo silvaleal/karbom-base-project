@@ -1,0 +1,28 @@
+{
+    "name": "silvaleal/karbom",
+    "description": "Um código feito em php para ajudar os programadores que irão utilizar PDO em suas aplicações. Atenção, este projeto não é um ORM, e sim apenas um atalho para mexer em um banco de dados, é usado SQL puro em nosso projeto.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php", "pdo", "database", "sql"],
+    "homepage": "https://github.com/silvaleal/karbom",
+    "authors": [
+        {
+            "name": "silvaleal",
+            "email": "lealsilva.ctt@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karbom\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/karbom"
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

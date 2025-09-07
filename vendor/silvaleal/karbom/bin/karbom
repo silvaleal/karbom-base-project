@@ -1,0 +1,57 @@
+#!/usr/bin/env php
+<?php
+
+require getcwd() . "/vendor/autoload.php";
+
+use Dotenv\Dotenv;
+use Karbom\Cli\Commands;
+
+$dotenv = Dotenv::createImmutable(getcwd());
+$dotenv->load();
+
+$cmds = Commands::list();
+
+switch (count($argv)) {
+    case 1:
+        echo "\n";
+        foreach ($cmds as $category => $command) {
+            echo "\033[92m$category\n\033[90m";
+            foreach ($command as $key => $description) {
+                echo " $key => $description\n";
+            }
+        }
+        echo "\n\033[39m";
+        break;
+
+    default:
+        $exploreArgs = explode(":", $argv[1]);
+
+        switch (count($exploreArgs)) {
+            case 1:
+                $category = $argv[1];
+                echo "\n\033[92m$category\n\033[90m";
+                foreach ($cmds[$category] as $key => $description) {
+                    echo " $key => $description\n";
+                }
+                echo "\n\033[39m";
+                break;
+
+            default:
+                $category = $exploreArgs[0];
+                $command = $exploreArgs[1];
+                $filePath = __DIR__ . "/../src/cli/$category/$command.php";
+
+                $command = ucfirst($command);
+                $category = ucfirst($category);
+                
+                if (file_exists($filePath)) {
+                    $commandClass = "Karbom\\Cli\\$category\\$command";
+                    $instance = new $commandClass();
+                    $instance->up();
+                } else {
+                    echo "Comando não encontrado.";
+                }
+                break;
+        }
+        break;
+}
