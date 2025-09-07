@@ -20,7 +20,8 @@ class Rules
         ];
 
         self::$rules["paths"] = [
-            "migrations" => getcwd() . $_ENV['KARBOM_MIGRATIONS']
+            "migrations" => getcwd() . $_ENV['KARBOM_MIGRATIONS'],
+            "seeders" => getcwd() . $_ENV['KARBOM_SEEDERS']
         ];
     }
 

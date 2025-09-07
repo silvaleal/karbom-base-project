@@ -221,16 +221,16 @@
         },
         {
             "name": "silvaleal/karbom",
-            "version": "v1.0.5.1",
+            "version": "v1.0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silvaleal/karbom.git",
-                "reference": "aadf9abc19c7b137cb0ceb804a307ba8800bd35b"
+                "reference": "1abba65dc0cf42ddb046cd3c3e5791fcd0ad8e72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silvaleal/karbom/zipball/aadf9abc19c7b137cb0ceb804a307ba8800bd35b",
-                "reference": "aadf9abc19c7b137cb0ceb804a307ba8800bd35b",
+                "url": "https://api.github.com/repos/silvaleal/karbom/zipball/1abba65dc0cf42ddb046cd3c3e5791fcd0ad8e72",
+                "reference": "1abba65dc0cf42ddb046cd3c3e5791fcd0ad8e72",
                 "shasum": ""
             },
             "require": {
@@ -266,9 +266,9 @@
             ],
             "support": {
                 "issues": "https://github.com/silvaleal/karbom/issues",
-                "source": "https://github.com/silvaleal/karbom/tree/v1.0.5.1"
+                "source": "https://github.com/silvaleal/karbom/tree/v1.0.6.1"
             },
-            "time": "2025-08-26T16:23:53+00:00"
+            "time": "2025-09-07T23:34:57+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
