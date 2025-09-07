@@ -3,6 +3,7 @@
 ```
 git clone https://github.com/silvaleal/karbom-base-project
 cd karbom-base-project
+composer install
 php -S localhost:8000 -t public
 ```
 
